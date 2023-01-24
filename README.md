@@ -67,6 +67,19 @@ else
 upcounter=upcounter+1;
 end endmodule
 ```
+Using Down-Counter:
+```
+module do_wn(clock,reset,downcounter);
+input clock,reset;
+output reg[3:0] downcounter;
+always@(posedge clock or posedge reset)
+begin
+if(reset)
+downcounter=4'b 000;
+else
+downcounter=downcounter+1;
+end endmodule
+```
 
 
 
@@ -76,6 +89,10 @@ end endmodule
 
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+![rtl6](https://user-images.githubusercontent.com/113975318/214319111-6deb2f75-033d-4f9c-8718-88f19ddf4692.png)
+![image](https://user-images.githubusercontent.com/113975318/214319433-70807701-4f66-4132-bfd6-fcf91bd76576.png)
+
+
 
 
 
@@ -86,12 +103,18 @@ end endmodule
 
 
 ### TIMING DIGRAMS FOR COUNTER  
+![tg6](https://user-images.githubusercontent.com/113975318/214319147-bf746975-dd05-4ab1-8abd-96d5e64f197c.png)
+![image](https://user-images.githubusercontent.com/113975318/214319505-f80d37d2-5e35-4758-b155-7743002a07d5.png)
+
 
 
 
 
 
 ### TRUTH TABLE 
+![tt6](https://user-images.githubusercontent.com/113975318/214319179-6ebf7a5f-4d06-45b6-8f15-f443f98a7037.png)
+
+![image](https://user-images.githubusercontent.com/113975318/214319547-ddd0b39b-174e-45ef-8617-d2b761684a21.png)
 
 
 
@@ -99,3 +122,4 @@ end endmodule
 
 
 ### RESULTS 
+Hence the Four bit Up counter and Down counter is implemented successfully and its functionality is validated.
